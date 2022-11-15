@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+        <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+              <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+              <title>Sign-up</title>
+            <link rel="stylesheet" href="css/style.css">
+          <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <style>
+          footer
+            {
+              bottom: 0;
+                background-color: black;
+              color: aliceblue;
+            }
+          
+          li
+            {
+              float: right;
+            }
+          li a
+            {
+              color: black;
+                display: block;
+                text-align: right;
+              text-decoration: none;
+            }
+          form-control
+          {
+              color: #555;
+                background-color: #fff;
+          }
+
+        </style>
+  </head>
+
+  <body class=" font-sans">
+        <header class="top-0">
+          <ul class=" overflow-hidden p-1 m-0 list-none bg-cyan-50 sm:p-0">
+            <img src="images/logo.png " alt="logo" width="175" height="84" class="absolute float-left mr-0 p-0 sm:w-2 ">
+            
+              <li><a href="login.html" class="border-2 bg-red-500 hover:bg-red-700 text-slate-100 p-2 rounded-md  sm:p-1">Login</a></li><!-- 
+                <li class=" hover:bg-slate-400"><a href="signup.html" class="border-2 bg-red-500 hover:bg-red-700 text-slate-100 p-2 rounded-md sm:p-1 ">sign up</a></li> -->
+                  <li><a href="#" class="text-blue-800 uppercase font-semibold p-2 sm:mt-10 sm:p-1  ">enterprise</a></li>
+                <li><a href="#" class="text-blue-800 uppercase font-semibold p-2 sm:mt-10 sm:m-0  sm:p-1">about us</a></li>
+              <li><a href="#" class="text-blue-800 uppercase font-semibold p-2 sm:mt-10 sm:p-1 ">Howitworks</a></li>
+    
+          </ul>
+        </header>
+
+    <main class=" flex-grow-1 ">
+        <div class=" relative" >
+            <img src="images/main_1.jpeg " alt="main2" width="max" height="800" > 
+                <div class="flex flex-col " style="align-items: center ;">
+                    <p class="  flex-row   text-5xl font-semibold text-slate-700 absolute p-3 top-36  h-auto  sm:top-4  sm:text-xl sm:font-bold   sm:m-3">Every patient has a unique story</p><br>
+                      <p class=" flex-row  text-3xl absolute text-slate-700 p-3 top-56  h-auto   sm:top-14 sm:text-lg   sm:m-3">Chart Biopsy’s mission is to tell yours</p>
+                </div>
+        </div>
+
+        <div class="flex flex-col mb-5 ">
+            <div class="p-5 mt-8 mb-10 mr-24 ml-24 sm:ml-6 sm:mr-6 sm:mb-5 sm:p-3" >
+                <p class="text-2xl p-5 font-semibold sm:p-1">The narrative of your medical history is more important than ever,
+                  and doctors can provide better care when they know your medical history. Sign-up to get started! </p><br>
+            </div>
+
+          <div class=" border-2  p-4 mt-10 m-20 sm:m-10 ">
+
+            <h2 class="text-2xl font-bold text-center">Create Your Account</h2>
+               
+                <div class="mt-8 ">
+                      
+                    <form id = "myform" onsubmit ="return verifyPassword()">
+
+                            <div class="flex flex-row justify-evenly">
+
+                                <div>
+                                  <label for="full"></label>
+                                    <input id="full" name="full"type="text" class="p-2 text-slate-700 mt-3 text-center mr-2 w-9/12 rounded-md bg-gray-100 border-2 focus:border-gray-500 focus:bg-white focus:ring-0 form-control" placeholder="Full name">
+                                </div>
+
+                                <div>
+                                    <label for="last"></label>
+                                      <input id="last" name="last" type="text" class="p-2 text-slate-700 text-center mt-3 block w-9/12 rounded-md bg-gray-100 border-2 border-slate-600 focus:border-gray-500 focus:bg-white focus:ring-0 form-control" placeholder="last name">
+                                </div>
+                            </div>
+                    
+                            <div>
+                              <div>
+                                <label for="email"></label>
+                                    <i class="material-icons absolute p-2 " style="color: rgb(108, 108, 108);">mail</i>
+                                      <input id="email" name="email"  type="email" class="p-2 mt-3  text-slate-700 text-center flex w-12/12 rounded-md bg-gray-100 border-2 focus:border-gray-500 focus:bg-white focus:ring-0 form-control" placeholder="e-mail">
+                              </div>
+                            </div>
+
+                          <div>
+                            <label for="spswd"></label>
+                              <i class="material-icons absolute p-2" style="color: rgb(108, 108, 108);">lock</i>
+                              <input id="spswd" name="spswd" type="Password" class="p-2 mt-3 text-slate-700 flex text-center w-12/12 rounded-md bg-gray-100 border-2 focus:border-gray-500 focus:bg-white focus:ring-0 form-control" placeholder="Password">
+                              <br><span id = "message" style="color:red"> </span> 
+                            </div>
+                        <div>
+                          <label for="repswd"></label>
+                        <input id="repswd" name="respswd" type="Password" class="p-2 mt-3 flex text-slate-700 text-center w-12/12 rounded-md bg-gray-100 border-2 focus:border-gray-500 focus:bg-white focus:ring-0 form-control" placeholder="Retype password to confirm">
+                        </div>
+
+                          <div>
+                            <label for="Mob"></label>  
+                            <i class="material-icons absolute p-2" style="color: rgb(108, 108, 108);">phone</i>
+                              <input id="Mob" name="Mob" type="Mobile" class="p-2 mt-3 flex text-slate-700 w-12/12 text-center rounded-md bg-gray-100 border-2 focus:border-gray-500 focus:bg-white focus:ring-0 form-control" placeholder="Mobile">
+                          </div>
+
+                        <div class="flex flex-row justify-around ">
+                            <button type="submit" id="sub_btn" name="Submit" class=" bg-red-500 w-12/12 border-transparent text-slate-50 rounded-xl p-2 mt-3 uppercase " > submit</button>
+                          </div>
+              
+                    </form>
+                  <script>
+                          
+                    function verifyPassword() {
+                      var pswd = document.getElementById("spswd").value;
+                      var email=document.getElementById("email").value;
+                      var full=document.getElementById("full").value;
+                      var last=document.getElementById("last").value;
+                      let sessionRecords=new Array();
+                      sessionRecords=JSON.parse(sessionStorage.getItem("users"))?JSON.parse(sessionStorage.getItem("users")):[]
+                              
+                      if(pswd == "") {
+                        if(email==""){
+                        document.getElementById("message").innerHTML = "**Fill the email and password please!";
+                        return false;}
+                        else{
+                        document.getElementById("message").innerHTML = "**Fill the password please!";
+                        return false;}
+                      }
+                          
+                            if(sessionRecords.some((record)=>{return record.email==document.getElementById("email").value && record.pswd==document.getElementById("spswd").value && record.full==document.getElementById("full").value && record.last==document.getElementById("last").value}))
+                                  {
+                                    alert("successful login");
+                                  }
+                                    else{
+                                  alert( "**Incorrect Information");
+
+                                    }
+                          };
+                </script>
+                <p class=" text-center p-2 mt-3">Already have a password? <a href="login.html" style="color: red;">Login Here</a></p>
+                <p class=" text-center p-2 mt-3"> <a href="profile.html" style="color: red;">Create Profile</a></p>
+                </div>
+          </div>
+        </div>
+    </main>
+
+    <footer>
+      <div class="flex flex-row ml-5">
+          <div class=" text-left flex flex-col ml-5 mr-7 p-4">
+                <p class="ml-5">Home</p>
+                  <p class="ml-5">How it Works</p>
+                  <p class="ml-5"> About Us</p>
+                <p class="ml-5">Enterprise</p>
+          </div>
+              <div class=" text-left flex flex-col ml-9 p-4">
+                  <p class="ml-5">Terms</p>
+                    <p class="ml-5">Privacy Policy</p>
+                  <p class="ml-5">Contact</p>
+              </div>
+      </div>
+          <hr>
+            <p class=" text-center p-3 mb-5">&copy; 2020 Chart Biopsy for a better medical system.</p>
+    </footer>
+
+  </body>
+</html>
+
+
+
+<!-- <script>
+                      const form = document.myForm;
+                        form.addEventListener("submit", function(event) {
+                          event.preventDefault();
+                          let formData = new FormData(this);
+                          let object = {};
+                          formData.forEach((value, key) => {
+                              object[key] = value
+                            });
+                              let json = JSON.stringify(object);
+                              console.log(json);
+                            }, false);
+                  </script> -->

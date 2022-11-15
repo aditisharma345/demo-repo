@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.text-slate-200 {
+    --tw-text-opacity: 1;
+    color: rgb(219, 228, 238);
+  }
